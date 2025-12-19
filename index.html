@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Face Morphing Playground</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Face Morphing Playground</h1>
+    <p>Load three or more faces to watch them blend together one pair at a time.</p>
+  </header>
+
+  <main>
+    <section class="controls card">
+      <div class="control-row">
+        <label class="file-label" for="faceInput">Add faces (png, jpg, svg)</label>
+        <input id="faceInput" type="file" accept="image/*" multiple />
+        <button id="loadSamples" type="button">Load sample faces</button>
+      </div>
+      <div class="control-row sliders">
+        <label>
+          Morph duration per pair (seconds)
+          <input id="durationInput" type="number" min="1" max="20" step="1" value="4" />
+        </label>
+        <label>
+          Pause between pairs (seconds)
+          <input id="pauseInput" type="number" min="0" max="10" step="0.5" value="1" />
+        </label>
+      </div>
+      <div class="control-row">
+        <button id="startMorph" type="button" class="primary">Start morph</button>
+        <button id="stopMorph" type="button" class="ghost">Stop</button>
+      </div>
+      <p class="hint">Tip: Drop new face images into the <code>faces/</code> folder and add them to <code>faces/manifest.json</code> to reuse them later.</p>
+    </section>
+
+    <section class="card gallery" aria-live="polite">
+      <div class="gallery-header">
+        <h2>Loaded faces</h2>
+        <span id="faceCount">0 faces</span>
+      </div>
+      <div id="faceList" class="face-list" role="list"></div>
+    </section>
+
+    <section class="card morph-stage">
+      <div class="stage-header">
+        <h2>Preview</h2>
+        <div id="status">Waiting for faces…</div>
+      </div>
+      <canvas id="morphCanvas" width="900" height="600" aria-label="Morph preview"></canvas>
+      <div class="progress" aria-hidden="true">
+        <div id="progressBar"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Designed for simple crossfade morphs like the Dutch program Kiespijn. Add three or more faces and watch them blend in sequence (1→2, 2→3, and so on).</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

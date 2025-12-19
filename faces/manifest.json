@@ -1,0 +1,7 @@
+{
+  "faces": [
+    { "label": "Sample face 1", "url": "faces/sample-face-1.svg" },
+    { "label": "Sample face 2", "url": "faces/sample-face-2.svg" },
+    { "label": "Sample face 3", "url": "faces/sample-face-3.svg" }
+  ]
+}
