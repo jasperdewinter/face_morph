@@ -1,7 +1,18 @@
 {
   "faces": [
-    { "label": "Sample face 1", "url": "faces/sample-face-1.svg" },
-    { "label": "Sample face 2", "url": "faces/sample-face-2.svg" },
-    { "label": "Sample face 3", "url": "faces/sample-face-3.svg" }
+    { "label": "Volodymyr Zelensky", "url": "faces/1.svg" },
+    { "label": "Vladimir Putin", "url": "faces/2.svg" },
+    { "label": "Taylor Swift", "url": "faces/3.svg" },
+    { "label": "Sabrina Carpenter", "url": "faces/4.svg" },
+    { "label": "Femke Halsema", "url": "faces/5.svg" },
+    { "label": "Ryan Adams", "url": "faces/6.svg" },
+    { "label": "Phoebe Bridgers", "url": "faces/7.svg" },
+    { "label": "Tom Odell", "url": "faces/8.svg" },
+    { "label": "Tyler Joseph", "url": "faces/9.svg" },
+    { "label": "Johnny Jordaan", "url": "faces/10.svg" },
+    { "label": "Bertolf", "url": "faces/11.svg" },
+    { "label": "Marco Borsato", "url": "faces/12.svg" },
+    { "label": "S10", "url": "faces/13.svg" },
+    { "label": "Froukje", "url": "faces/14.svg" }
   ]
 }
