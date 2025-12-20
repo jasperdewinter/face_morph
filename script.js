@@ -59,11 +59,25 @@ async function fetchFacesFromManifest() {
 }
 
 function loadFileAsFace(file) {
+  if (!isSupportedImage(file)) {
+    setStatus(`Only image files are supported (png, jpg, svg). Skipped ${file.name}.`);
+    return;
+  }
+
   const reader = new FileReader();
   reader.onload = (ev) => {
     loadFace(ev.target.result, file.name);
   };
   reader.readAsDataURL(file);
+}
+
+function isSupportedImage(file) {
+  const supportedExtensions = ['.png', '.jpg', '.jpeg', '.svg'];
+  const fileName = file.name?.toLowerCase() || '';
+  const fileType = file.type?.toLowerCase() || '';
+
+  if (fileType.startsWith('image/')) return true;
+  return supportedExtensions.some((ext) => fileName.endsWith(ext));
 }
 
 function loadFace(url, label = 'Face') {

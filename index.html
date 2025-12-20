@@ -16,7 +16,12 @@
     <section class="controls card">
       <div class="control-row">
         <label class="file-label" for="faceInput">Add faces (png, jpg, svg)</label>
-        <input id="faceInput" type="file" accept="image/*" multiple />
+        <input
+          id="faceInput"
+          type="file"
+          accept=".png,.jpg,.jpeg,.svg,image/*"
+          multiple
+        />
         <button id="loadSamples" type="button">Load sample faces</button>
       </div>
       <div class="control-row sliders">
